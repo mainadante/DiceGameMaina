@@ -1,26 +1,56 @@
-var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-
-var randomDiceImage = "dice" + randomNumber1 + ".png";
-
-var randomDiceSource = "images/" + randomDiceImage;
-
-var image1 = document.querySelectorAll("img")[0];
-
-image1.setAttribute("src", randomDiceSource);
-
-
-var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
-var randomDiceSource2 = "images/dice" + randomNumber2 + ".png";
-
-document.querySelectorAll("img")[1].setAttribute("src", randomDiceSource2);
-
-if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = "🚩Player 1 Wins!";
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
-else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h1").innerHTML = "Player 2 Wins!🚩";
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
 }
-else {
-    document.querySelector("h1").innerHTML = "🚩Draw!🚩";
+
+body {
+  background-color: #004225;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Pixelify Sans', sans-serif;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #EE9322;
+}
+
+p {
+  font-size: 2rem;
+  color: #EE9322;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+   
+}
+
+.play-button {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 2rem;
+  background-color: #EE9322;
+  border-radius: 5px;
+  border: 0;
 }
